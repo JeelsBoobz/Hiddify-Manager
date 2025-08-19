@@ -4,8 +4,8 @@
         {% for u in users %}
             {
                 "id": "{{ u['uuid'] }}", 
-                "email": "{{ u['uuid'] }}@hiddify.com",
-                "flow": "{{flow}}"{% if u['uuid'] != '00000000-0000-0000-0000-000000000000' %},"limitIp": 2{% endif %}
+                "email": "{{ u['uuid'] }}@hiddify.com",{% if u['uuid'] != '00000000-0000-0000-0000-000000000000' %}"limitIp": 2,{% endif %}
+                "flow": "{{flow}}"
             },
         {% endfor %}
     ],

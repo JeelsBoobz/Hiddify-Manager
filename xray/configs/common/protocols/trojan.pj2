@@ -2,7 +2,7 @@
 "settings": {
     "clients": [
         {% for u in users %}
-            {"password": "{{ u['uuid'] }}", "email": "{{ u['uuid'] }}@hiddify.com"},
+            {"password": "{{ u['uuid'] }}", "email": "{{ u['uuid'] }}@hiddify.com"{% if u['uuid'] != '00000000-0000-0000-0000-000000000000' %},"limitIp": 2{% endif %}},
         {% endfor %}
     ]
 }

@@ -5,7 +5,7 @@
             {
                 "id": "{{ u['uuid'] }}", 
                 "email": "{{ u['uuid'] }}@hiddify.com",
-                "flow": "{{flow}}"
+                "flow": "{{flow}}"{% if u['uuid'] != '00000000-0000-0000-0000-000000000000' %},"limitIp": 2{% endif %}
             },
         {% endfor %}
     ],
